@@ -1,4 +1,4 @@
-require 'rails_helpers'
+require 'rails_helper'
 
 RSpec.describe 'Items API' do
   # Initialize the test data
@@ -44,7 +44,7 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns the todo item' do
-        expect(json['id'].to eq(id)
+        expect(json['id']).to eq(id)
       end
     end
 
@@ -111,7 +111,7 @@ RSpec.describe 'Items API' do
       end
 
       it 'returns a not found message' do
-        expect(response.body).to match(/Couldn't find item/)
+        expect(response.body).to match(/Couldn't find Item/)
       end
     end
   end
